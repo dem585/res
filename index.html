@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -181,16 +182,21 @@
 				<img src="images/icn/dvor.png">
 				<p class="gallery-text title text-l">летний дворец</p>
 				</div>
-				<img class="col-w" src="images/in2.jpg">
-				<img class="col-w" src="images/in1.jpg">
+				<a href="images/in2.jpg">
+				<img class="col-w" src="images/in2.jpg"></a>
+				<a href="images/in1.jpg">
+				<img class="col-w" src="images/in1.jpg"></a>
 				</div>
 				<div class="gallery__inner">
 					<div class="gallery__inner-col">
-						<img class="col-w-b" src="images/bb.jpg">
+						<a href="images/bb.jpg">
+						<img class="col-w-b" src="images/bb.jpg"></a>
 					</div>
 					<div class="gallery__inner-col">
-						<img class="col-w" src="images/slider-1.jpg">
-						<img class="col-w" src="images/slider-3.jpg">
+						<a href="images/slider-1.jpg">
+						<img class="col-w" src="images/slider-1.jpg"></a>
+						<a href="images/slider-3.jpg">
+						<img class="col-w" src="images/slider-3.jpg"></a>
 					</div>
 				</div>
 			</div>
@@ -223,9 +229,11 @@
 						</div>
 					</div>
 				</div>
-				<form>
-					<input class="contacts__form-input" type="text" name="phone" placeholder="Ваше имя">
-					<input class="contacts__form-input" type="text" name="mail" placeholder="Ваш e-mail">
+				<form id="form" action="#">					
+					<input class="contacts__form-input" type="text" name="name" placeholder="Ваше имя">
+					
+					<div class="inputBox">
+					<input id="email" class="contacts__form-input" type="text" name="mail" placeholder="Ваш e-mail" onkeydown="validation()"><span id="text-email"></span></div>
 					<textarea class="contacts__form-textarea" placeholder="Сообщение"></textarea>
 					<button class="contacts__form-btn" type="submit">отправить</button>
 				</form>
@@ -260,6 +268,7 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/video.js"></script>
   <script src="js/main.js"></script>
 </body>

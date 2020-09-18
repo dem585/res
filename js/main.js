@@ -50,7 +50,58 @@ $(function(){
 
 
   
+});	
+
+$(document).ready(function() {
+	$('.gallery__inner').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
 });
 
+
+function validation(){
+	var form = document.getElementById("form");
+	var email = document.getElementById("email").value;
+	var text = document.getElementById("text-email");
+	var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+		if (email.match(pattern)) {
+			form.classList.add("valid");
+			form.classList.remove("invalid");
+			text.innerHTML ="";
+			text.style.color = "green"
+		}
+		else{
+			form.classList.remove("valid");
+			form.classList.add("invalid");
+			text.innerHTML ="Ведите валидный email";
+			text.style.color = "red"
+		}
+
+		if (email == "") {
+			form.classList.remove("valid");
+			form.classList.remove("invalid");
+			text.innerHTML ="";
+			text.style.color = "red"
+		}
+}
 
 
